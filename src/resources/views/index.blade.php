@@ -22,7 +22,8 @@
       <div class="contact-form__heading">
         <h2>Contact</h2>
       </div>
-      <form class="form">
+      <form class="form" action="/contacts/confirm" method="post">
+        @csrf
         <div class="form__group">
           <div class="form__group-title">
             <span class="form__label--item">お名前</span>
@@ -30,8 +31,8 @@
           </div>
           <div class="form__group-content">
             <div class="form__input--text">
-              <input type="text" name="name" placeholder="例　山田" />
-              <input type="text" name="name" placeholder="例　太郎" />
+              <input type="text" name="first_name" placeholder="例　山田" />
+              <input type="text" name="last_name" placeholder="例　太郎" />
             </div>
             <div class="form__error">
               <!--バリデーション機能を実装したら記述します。-->
@@ -126,7 +127,7 @@
           </div>
           <div class="form__group-content">
               <select name="content">
-              <option value="selected disabled">選択してください</option></select>
+              <option value="detail">選択してください</option></select>
             </div>
           </div>
         </div>

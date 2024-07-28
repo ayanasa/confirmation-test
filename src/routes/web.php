@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ConfirmationController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +14,6 @@ use App\Http\Controllers\ConfirmationController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/', [ConfirmationController::class, 'index']);
+Route::get('/', [ContactController::class, 'index']);
+Route::post('/contacts/confirm', [ContactController::class, 'confirm']);
+Route::post('/contacts', [ContactController::class, 'store']);

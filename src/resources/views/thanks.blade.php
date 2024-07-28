@@ -11,13 +11,12 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="header__inner">
+  <body>
+  <div class="header">
       <a class="header__logo" href="/">
-        Contact Form
+        FashionablyLate
       </a>
-    </div>
-  </header>
+  </div>
 
   <main>
     <div class="thanks__content">
